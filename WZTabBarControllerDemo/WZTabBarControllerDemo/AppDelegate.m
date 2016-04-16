@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WZTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -16,8 +17,53 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+    self.window.rootViewController = [self tabBarController];
+    [self tabBarController];
+    [self.window makeKeyAndVisible];
+    
     return YES;
+}
+
+- (WZTabBarController *)tabBarController {
+    WZTabBarController *tabBarController = [[WZTabBarController alloc] init];
+    
+    UIViewController *vc1 = [self randomViewController];
+    UIViewController *vc2 = [self randomViewController];
+    UIViewController *vc3 = [self randomViewController];
+    UIViewController *vc4 = [self randomViewController];
+    
+    [self setUpViewController:vc1 withTitle:@"控制器1" imageName:@"tabBar_1" selectedImageName:@"tabBar_1_select"];
+    [self setUpViewController:vc2 withTitle:@"控制器2" imageName:@"tabBar_2" selectedImageName:@"tabBar_2_select"];
+    [self setUpViewController:vc3 withTitle:@"控制器3" imageName:@"tabBar_3" selectedImageName:@"tabBar_3_select"];
+    [self setUpViewController:vc4 withTitle:@"控制器4" imageName:@"tabBar_4" selectedImageName:@"tabBar_4_select"];
+    
+    tabBarController.viewControllers = @[vc1, vc2, vc3, vc4];
+    
+    return tabBarController;
+}
+
+- (UIViewController *)randomViewController {
+    UIViewController *controller = [[UIViewController alloc] init];
+    
+    controller.view.backgroundColor = [UIColor colorWithRed:arc4random() % 255 / 255.0
+                                                      green:arc4random() % 255 / 255.0
+                                                       blue:arc4random() % 255 / 255.0
+                                                      alpha:1];
+    
+    return controller;
+}
+
+- (void)setUpViewController:(UIViewController *)viewController
+                  withTitle:(NSString *)title
+                  imageName:(NSString *)imageName
+          selectedImageName:(NSString *)selectedImageName
+{
+    viewController.tabBarItem.title = title;
+    viewController.tabBarItem.image = [[UIImage imageNamed:imageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    viewController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

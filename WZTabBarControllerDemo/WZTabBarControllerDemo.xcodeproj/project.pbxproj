@@ -15,8 +15,8 @@
 		C5B81B851CC282A900264E2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B81B831CC282A900264E2A /* LaunchScreen.storyboard */; };
 		C5B81B901CC282A900264E2A /* WZTabBarControllerDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B81B8F1CC282A900264E2A /* WZTabBarControllerDemoTests.m */; };
 		C5B81B9B1CC282A900264E2A /* WZTabBarControllerDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B81B9A1CC282A900264E2A /* WZTabBarControllerDemoUITests.m */; };
-		C5B81BAB1CC282C600264E2A /* WZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B81BAA1CC282C600264E2A /* WZTabBar.m */; };
-		C5B81BAE1CC282E600264E2A /* WZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B81BAD1CC282E600264E2A /* WZTabBarController.m */; };
+		C5B81BB41CC2853000264E2A /* WZTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B81BB11CC2853000264E2A /* WZTabBar.m */; };
+		C5B81BB51CC2853000264E2A /* WZTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B81BB31CC2853000264E2A /* WZTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 		C5B81B961CC282A900264E2A /* WZTabBarControllerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WZTabBarControllerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B81B9A1CC282A900264E2A /* WZTabBarControllerDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZTabBarControllerDemoUITests.m; sourceTree = "<group>"; };
 		C5B81B9C1CC282A900264E2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C5B81BA91CC282C600264E2A /* WZTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZTabBar.h; sourceTree = "<group>"; };
-		C5B81BAA1CC282C600264E2A /* WZTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZTabBar.m; sourceTree = "<group>"; };
-		C5B81BAC1CC282E600264E2A /* WZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZTabBarController.h; sourceTree = "<group>"; };
-		C5B81BAD1CC282E600264E2A /* WZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZTabBarController.m; sourceTree = "<group>"; };
+		C5B81BB01CC2853000264E2A /* WZTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZTabBar.h; sourceTree = "<group>"; };
+		C5B81BB11CC2853000264E2A /* WZTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZTabBar.m; sourceTree = "<group>"; };
+		C5B81BB21CC2853000264E2A /* WZTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZTabBarController.h; sourceTree = "<group>"; };
+		C5B81BB31CC2853000264E2A /* WZTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		C5B81B741CC282A900264E2A /* WZTabBarControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
-				C5B81BA81CC282B800264E2A /* WZTabBarController */,
+				C5B81BAF1CC2853000264E2A /* WZTabBarController */,
 				C5B81B781CC282A900264E2A /* AppDelegate.h */,
 				C5B81B791CC282A900264E2A /* AppDelegate.m */,
 				C5B81B7B1CC282A900264E2A /* ViewController.h */,
@@ -147,15 +147,16 @@
 			path = WZTabBarControllerDemoUITests;
 			sourceTree = "<group>";
 		};
-		C5B81BA81CC282B800264E2A /* WZTabBarController */ = {
+		C5B81BAF1CC2853000264E2A /* WZTabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				C5B81BA91CC282C600264E2A /* WZTabBar.h */,
-				C5B81BAA1CC282C600264E2A /* WZTabBar.m */,
-				C5B81BAC1CC282E600264E2A /* WZTabBarController.h */,
-				C5B81BAD1CC282E600264E2A /* WZTabBarController.m */,
+				C5B81BB01CC2853000264E2A /* WZTabBar.h */,
+				C5B81BB11CC2853000264E2A /* WZTabBar.m */,
+				C5B81BB21CC2853000264E2A /* WZTabBarController.h */,
+				C5B81BB31CC2853000264E2A /* WZTabBarController.m */,
 			);
-			path = WZTabBarController;
+			name = WZTabBarController;
+			path = ../../WZTabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,9 +291,9 @@
 			files = (
 				C5B81B7D1CC282A900264E2A /* ViewController.m in Sources */,
 				C5B81B7A1CC282A900264E2A /* AppDelegate.m in Sources */,
-				C5B81BAB1CC282C600264E2A /* WZTabBar.m in Sources */,
+				C5B81BB41CC2853000264E2A /* WZTabBar.m in Sources */,
 				C5B81B771CC282A900264E2A /* main.m in Sources */,
-				C5B81BAE1CC282E600264E2A /* WZTabBarController.m in Sources */,
+				C5B81BB51CC2853000264E2A /* WZTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +517,7 @@
 				C5B81BA11CC282A900264E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5B81BA21CC282A900264E2A /* Build configuration list for PBXNativeTarget "WZTabBarControllerDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +526,7 @@
 				C5B81BA41CC282A900264E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5B81BA51CC282A900264E2A /* Build configuration list for PBXNativeTarget "WZTabBarControllerDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +535,7 @@
 				C5B81BA71CC282A900264E2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,8 +7,11 @@
 //
 
 #import "WZTabBarController.h"
+#import "WZTabBar.h"
 
 @interface WZTabBarController ()
+
+@property (nonatomic ,readonly) WZTabBar *wz_tabBar;
 
 @end
 
@@ -16,22 +19,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // 替换tabBar
+    [self setValue:[[WZTabBar alloc] init] forKey:@"tabBar"];
+    self.wz_tabBar.wz_multiplySelectedWidth = 1.2;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Set
+- (void)setWz_multiplySelectedWidth:(CGFloat)wz_multiplySelectedWidth {
+    self.wz_tabBar.wz_multiplySelectedWidth = wz_multiplySelectedWidth;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setWz_selectionIndicatorImage:(UIImage *)wz_selectionIndicatorImage {
+    self.wz_tabBar.wz_selectionIndicatorImage = wz_selectionIndicatorImage;
 }
-*/
+
+#pragma mark - Get
+- (CGFloat)wz_multiplySelectedWidth { return self.wz_tabBar.wz_multiplySelectedWidth; }
+- (UIImage *)wz_selectionIndicatorImage { return self.wz_tabBar.wz_selectionIndicatorImage; }
+
+
+
+#pragma mark - Private Method
+- (WZTabBar *)wz_tabBar {
+    return (WZTabBar *)self.tabBar;
+}
 
 @end
