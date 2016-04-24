@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class WZTabBar;
+
+@protocol WZTabBarDelegate <NSObject>
+
+@required
+- (void)wz_tabBar:(WZTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index;
+
+@end
+
 @interface WZTabBar : UITabBar
+
+@property (nonatomic ,weak) id<WZTabBarDelegate> wz_delegate;
 
 /* The selection indicator image is drawn on top of the tab bar, behind the bar item icon.
  */

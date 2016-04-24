@@ -9,7 +9,7 @@
 #import "WZTabBarController.h"
 #import "WZTabBar.h"
 
-@interface WZTabBarController ()
+@interface WZTabBarController () <WZTabBarDelegate>
 
 @property (nonatomic ,readonly) WZTabBar *wz_tabBar;
 
@@ -22,6 +22,12 @@
     // 替换tabBar
     [self setValue:[[WZTabBar alloc] init] forKey:@"tabBar"];
     self.wz_tabBar.wz_multiplySelectedWidth = 1.2;
+    self.wz_tabBar.wz_delegate = self;
+}
+
+#pragma mark - WZTabBar Delegate
+- (void)wz_tabBar:(WZTabBar *)tabBar didSelectItemAtIndex:(NSInteger)index {
+    self.selectedIndex = index;
 }
 
 #pragma mark - Set
@@ -36,8 +42,6 @@
 #pragma mark - Get
 - (CGFloat)wz_multiplySelectedWidth { return self.wz_tabBar.wz_multiplySelectedWidth; }
 - (UIImage *)wz_selectionIndicatorImage { return self.wz_tabBar.wz_selectionIndicatorImage; }
-
-
 
 #pragma mark - Private Method
 - (WZTabBar *)wz_tabBar {
